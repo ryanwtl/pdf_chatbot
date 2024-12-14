@@ -96,12 +96,12 @@ def main():
                 
                 print(text_chunks)
 
-                # # create vector store
-                # vectorstore = get_vectorstore(text_chunks)
+                # create vector store
+                vectorstore = get_vectorstore(text_chunks)
 
-                # # create conversation chain
-                # st.session_state.conversation = get_conversation_chain(
-                #     vectorstore)
+                # create conversation chain
+                st.session_state.conversation = get_conversation_chain(
+                    vectorstore)
 
 
 if __name__ == '__main__':
