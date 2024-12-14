@@ -80,6 +80,7 @@ def main():
 
     st.header("Chat with multiple PDFs :books:")
     user_question = st.text_input("Ask a question about your documents:")
+    st.write(user_question)
     if user_question:
         handle_userinput(user_question)
 
@@ -97,14 +98,14 @@ def main():
                 # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
                 
-                st.write(text_chunks)
+                # st.write(text_chunks)
 
-                # # create vector store
-                # vectorstore = get_vectorstore(text_chunks)
+                # create vector store
+                vectorstore = get_vectorstore(text_chunks)
 
-                # # create conversation chain
-                # st.session_state.conversation = get_conversation_chain(
-                #     vectorstore)
+                # create conversation chain
+                st.session_state.conversation = get_conversation_chain(
+                    vectorstore)
 
 
 if __name__ == '__main__':
