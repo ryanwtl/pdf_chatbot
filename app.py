@@ -89,12 +89,12 @@ def main():
                 # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
 
-                print(raw_text)
+                # print(raw_text)
 
                 # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
                 
-                print(text_chunks)
+                # print(text_chunks)
 
                 # create vector store
                 vectorstore = get_vectorstore(text_chunks)
