@@ -89,19 +89,19 @@ def main():
                 # get pdf text
                 raw_text = get_pdf_text(pdf_docs)
 
-                # print(raw_text)
+                # st.write(raw_text)
 
                 # get the text chunks
                 text_chunks = get_text_chunks(raw_text)
                 
-                # print(text_chunks)
+                st.write(text_chunks)
 
-                # create vector store
-                vectorstore = get_vectorstore(text_chunks)
+                # # create vector store
+                # vectorstore = get_vectorstore(text_chunks)
 
-                # create conversation chain
-                st.session_state.conversation = get_conversation_chain(
-                    vectorstore)
+                # # create conversation chain
+                # st.session_state.conversation = get_conversation_chain(
+                #     vectorstore)
 
 
 if __name__ == '__main__':
