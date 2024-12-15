@@ -9,7 +9,10 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
+from huggingface_hub import InferenceClient
 import torch
+
+client = InferenceClient(api_key="my_access_token")
 
 def get_pdf_text(pdf_docs):
     text = ""
